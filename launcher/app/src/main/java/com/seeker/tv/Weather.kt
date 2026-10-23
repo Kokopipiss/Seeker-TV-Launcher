@@ -81,7 +81,7 @@ class Weather(ctx: Context) {
         const val REFRESH_MS = 20 * 60 * 1000L
         val DEFAULT = Place("DENVER", 39.7392, -104.9903)
         private const val FORECAST = "https://api.open-meteo.com/v1/forecast?latitude=%.4f&longitude=%.4f" +
-            "&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=auto"
+            "&current=temperature_2m,weather_code&temperature_unit=celsius&timezone=auto"
         private const val GEOCODE = "https://geocoding-api.open-meteo.com/v1/search?count=1&language=en&format=json&name="
 
         fun place(prefs: android.content.SharedPreferences): Place {
