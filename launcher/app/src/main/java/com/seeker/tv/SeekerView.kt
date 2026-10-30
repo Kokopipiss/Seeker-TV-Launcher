@@ -106,12 +106,12 @@ class SeekerView(ctx: Context, private val host: Host) : View(ctx) {
         }
     }
     private val longPress = Runnable { if (centerDown) { centerDown = false; openMenu() } }
-    private var greeting = "HELLO SEEKER"
+    private var greeting = "HELLO STELIOS"
     private var weather = Weather.Now("cloud", "--°", 0)
 
     private val tz = TimeZone.getDefault()
-    private val timeFmt = SimpleDateFormat("h:mm a", Locale.US).apply { timeZone = tz }
-    private val dateFmt = SimpleDateFormat("EEE MMM d", Locale.US).apply { timeZone = tz }
+    private val timeFmt = SimpleDateFormat("HH:mm", Locale.US).apply { timeZone = tz }
+    private val dateFmt = SimpleDateFormat("EEEE d MMMM", Locale.US).apply { timeZone = tz }
 
     // per-row animated transform (x offset, center y, scale, opacity), css-transition style
     private var curX = FloatArray(0); private var curY = FloatArray(0)
